@@ -1,0 +1,101 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+
+    <div class="div-logo">
+      <img class="img-logo"
+           [src]="appConfig.getAppLogo()"/>
+    </div>
+    <mat-card class="card-menu-button">
+      <mat-card-content>
+        <p>{{ appConfig.getAppOwner() }}</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-menu-button" (click)="onHome()">
+      <mat-card-content>
+        <p>Home</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-menu-button" *ngIf="isUserAdmin()" (click)="onDashboard()">
+      <mat-card-content>
+        <p>Dashboard</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-menu-button" (click)="onLogOut()">
+      <mat-card-content>
+        <p>Logout</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-drawer>
+
+  <div class="drawer-sidenav-content">
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>{{ appConfig.getAppName() }} {{ roomData != null ? ' - ' + roomData.name : ''}}</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+    <div *ngIf="roomData">
+      <div style="display: inline-flex; margin: 16px ">
+        <img [src]="roomData.image1"  class="image"/>
+        <img [src]="roomData.image2"  class="image"/>
+        <img [src]="roomData.image3"  class="image"/>
+        <img [src]="roomData.image4"  class="image" style="margin-right: 0px"/>
+      </div>
+
+
+      <div style="display: flex">
+        <div style="display: ruby; margin-left: auto; margin-right: auto">
+          <mat-card class="card-item">
+            <mat-card-content>
+              <p class="p-title">{{ roomData.name | titlecase}} </p>
+              <p class="p-description">Description: {{ roomData.description }}</p>
+              <p>Room Type: {{ roomData.roomType | titlecase }}</p>
+              <p>Price:<span class="p-price">{{ roomData.price }} RON</span></p>
+
+
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="card-item">
+            <mat-card-title style="margin-left: 16px; margin-bottom: 16px; margin-top: 16px;">
+              Please select date for you reservation
+            </mat-card-title>
+            <mat-card-content>
+              <div class="input-container">
+                <mat-form-field style="width: 100%; margin-bottom: 16px;">
+                  <mat-label>Enter a date range</mat-label>
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate [formControl]="startDate" placeholder="Start date">
+                    <input matEndDate [formControl]="endDate" placeholder="End date">
+                  </mat-date-range-input>
+                  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+              </div>
+              <div class="input-container">
+                <mat-form-field style="width: 100%; margin-bottom: 16px;">
+                  <mat-label>Details about reservation</mat-label>
+                  <textarea matInput placeholder="Details about reservation" [formControl]="details" required></textarea>
+                  <mat-error *ngIf="details.invalid">{{getErrorMessage(details)}}</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="div-controls">
+                <button mat-raised-button color="primary" class="btn-buy" (click)="onBooking()">Book now!</button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</mat-drawer-container>
+

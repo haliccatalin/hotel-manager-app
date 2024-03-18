@@ -1,0 +1,21 @@
+<div class="page-view">
+  <mat-card *ngFor="let room of rooms" class="card-item">
+    <img [src]="room.image1" class="image"/>
+
+    <mat-card-content>
+      <p class="p-title">{{ room.name | titlecase}} </p>
+      <p class="p-description">Description: {{ room.description }}</p>
+      <p>Room Type: {{ room.roomType | titlecase }}</p>
+      <p >Price:<span class="p-price">{{ room.price }} RON</span></p>
+
+      <div *ngIf="isAdmin" class="div-admin-controls">
+        <button mat-raised-button color="primary" class="btn-action" (click)="onEdit(room)">Edit</button>
+        <div style="height: 16px"></div>
+        <button mat-raised-button color="accent" class="btn-action" (click)="onDelete(room)">Delete</button>
+      </div>
+      <div *ngIf="!isAdmin" class="div-controls">
+        <button mat-raised-button color="primary" class="btn-buy" (click)="onBuy(room)">Book now!</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

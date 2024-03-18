@@ -1,0 +1,125 @@
+{
+    "rooms": [
+        {
+            "name": "Standard Room",
+            "description": " - LCD TV\n - Free Wireless Internet\n - Safe (laptop size)\n - Bathrobe\n - Slippers\n - Hairdryer\n - Mini Bar\n - Coffee maker\n - Iron and ironing board\n\nCozy, for guests to feel like home, our standard rooms are fully-equipped with high-tech facilities, being located from floor 1 to 9. Self – controlled air conditioning system, LCD TV, laptop size safe, bathroom cosmetics and accessories, minibar and access to Vitality Wellness Club are some of the facilities of the Standard rooms.",
+            "price": 145,
+            "image1": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD2.jpg",
+            "image2": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD3.jpg",
+            "image3": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD4.jpg",
+            "image4": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD5.jpg",
+            "roomType": "DOUBLE"
+        },
+        {
+            "name": "Luxury Room",
+            "description": " - LCD TV\n - Free Wireless Internet\n - Safe (laptop size)\n - Bathrobe\n - Slippers\n - Hairdryer\n - Mini Bar\n - Coffee maker\n - Iron and ironing board\n\nSituated at the 10th and 11th floor, Business Class rooms feature an imposing view of the city. From the standard facilities, guests will benefit of express check-in & check-out and also free access to Business Lounge, where they can relax, serve refreshments and snacks or organize small business meetings.",
+            "price": 245,
+            "image1": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/B2B_8.jpg",
+            "image2": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/B2B_7.jpg",
+            "image3": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/B2B_1.jpg",
+            "image4": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/B2B_5.jpg",
+            "roomType": "LUXURY"
+        },
+        {
+            "name": "Twins Room",
+            "description": " - LCD TV\n - Free Wireless Internet\n - Safe (laptop size)\n - Bathrobe\n - Slippers\n - Hairdryer\n - Mini Bar\n - Coffee maker\n - Iron and ironing board\n\nWith a special ambiance and a refined design, the spacious suites offered by Ramada Plaza Bucharest are perfect for a comfortable stay, for both tourists and business travelers. Situated at the 11th floor, the suites feature among the standard facilities, an exquisite cosmetic line, express check-in & check-out and free access to Business Lounge.",
+            "price": 345,
+            "image1": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD6.jpg",
+            "image2": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD3.jpg",
+            "image3": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/STD5.jpg",
+            "image4": "https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/B2B_4.jpg",
+            "roomType": "TWINS"
+        },
+        {
+            "name": "Single Room",
+            "description": " - LCD TV\n - Free Wireless Internet\n - Safe (laptop size)\n - Bathrobe\n - Slippers\n - Hairdryer\n - Mini Bar\n - Coffee maker\n - Iron and ironing board\n\nSituated at the 10th and 11th floor, Business Class rooms feature an imposing view of the city. From the standard facilities, guests will benefit of express check-in & check-out and also free access to Business Lounge, where they can relax, serve refreshments and snacks or organize small business meetings.",
+            "price": 190,
+            "image1": "https://ramadaplazabucharest.ro/wp-content/uploads/2019/12/Ramada-Plaza_Junior-Suite_S11.jpg",
+            "image2": "https://ramadaplazabucharest.ro/wp-content/uploads/2019/12/Plaza-junior.jpg",
+            "image3": "https://ramadaplazabucharest.ro/wp-content/uploads/2019/12/Ramada-Plaza_Junior-1184_048.jpg",
+            "image4": "https://ramadaplazabucharest.ro/wp-content/uploads/2019/12/Ramada-Plaza_Bathroom_SNK1.jpg",
+            "roomType": "SINGLE"
+        }
+    ],
+    "users": [
+        {
+            "name": "admin",
+            "address": "Constitutiei nr.14, Arad",
+            "email": "admin",
+            "phone": "+40745544231",
+            "password": "admin",
+            "userRole": "ADMIN"
+        },
+        {
+            "name": "Paul Popa",
+            "address": "Aviatorilor nr.14, Arad",
+            "email": "paul.popa@gmail.com",
+            "phone": "+40745324231",
+            "password": "1234",
+            "userRole": "CUSTOMER"
+        },
+        {
+            "name": "Dana Mihai",
+            "address": "Scoalei nr.193, Arad",
+            "email": "dana.m@gmail.com",
+            "phone": "+40723424231",
+            "password": "1234",
+            "userRole": "CUSTOMER"
+        },
+        {
+            "name": "Mihnea Petrescu",
+            "address": "Independentei nr.1, Arad",
+            "email": "mihnea.pertescu@gmail.com",
+            "phone": "+40741434355",
+            "password": "1234",
+            "userRole": "CUSTOMER"
+        }
+    ],
+    "reservations": [
+        {
+            "startDate": "2024-03-18",
+            "endData": "2024-03-19",
+            "total": 300,
+            "details": "To be available before 12:00",
+            "paymentStatus": "PENDING",
+            "customer": {
+                "id": 1
+            },
+            "roomList": [
+                {
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "startDate": "2024-03-18",
+            "endData": "2024-03-19",
+            "total": 300,
+            "details": "To be available before 12:00",
+            "paymentStatus": "PENDING",
+            "customer": {
+                "id": 1
+            },
+            "roomList": [
+                {
+                    "id": 4
+                }
+            ]
+        },
+        {
+            "startDate": "2024-03-18",
+            "endData": "2024-03-19",
+            "total": 300,
+            "details": "To be available before 12:00",
+            "paymentStatus": "PENDING",
+            "customer": {
+                "id": 1
+            },
+            "roomList": [
+                {
+                    "id": 5
+                }
+            ]
+        }
+    ]
+}

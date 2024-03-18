@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql/mysql-server:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'hotel_management_db'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - .db-data:/Users/catalinhalic/Workspace/Learning/Java/mySql/database
+    ports:
+      - '3306:3306'
+volumes:
+  my-datavolume:

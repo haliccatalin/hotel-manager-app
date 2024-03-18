@@ -1,0 +1,192 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+
+    <div class="div-logo">
+      <img class="img-logo"
+           [src]="appConfig.getAppLogo()"/>
+    </div>
+    <mat-card class="card-menu-button">
+      <mat-card-content>
+        <p>{{ appConfig.getAppOwner() }}</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-menu-button" *ngIf="isUserAdmin()" (click)="onDashboard()">
+      <mat-card-content>
+        <p>Dashboard</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-menu-button" (click)="onLogOut()">
+      <mat-card-content>
+        <p>Logout</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-drawer>
+
+  <div class="drawer-sidenav-content">
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>{{ appConfig.getAppName() }}</span>
+      <span class="example-spacer"></span>
+<!--      <app-cart-button></app-cart-button>-->
+    </mat-toolbar>
+
+    <img class="img-banner"
+         src="https://ramadaplazabucharest.ro/wp-content/uploads/2023/03/B2B_1.jpg"/>
+    <img class="img-banner"
+         src="https://ramadaplazabucharest.ro/wp-content/uploads/2019/12/Plaza-junior.jpg"/>
+    <img class="img-banner"
+         src="https://ramadaplazabucharest.ro/wp-content/uploads/2019/12/Ramada-Plaza_Bathroom_SNK1.jpg"/>
+
+    <mat-card class="card-about-us">
+      <mat-card-title class="title-about-us">Indulge in Luxury: Experience Unparalleled Comfort at Our 5-Star Hotel
+      </mat-card-title>
+      <mat-card-content>
+
+        <div class="div-text">
+          <p>
+            Welcome to the epitome of luxury and sophistication, where every moment is crafted to perfection and every
+            desire is fulfilled beyond expectation. Nestled in the heart of [City Name], our 5-star hotel stands as a
+            beacon of opulence, offering an unforgettable experience for discerning travelers from around the globe.
+            Whether you're seeking a tranquil retreat, a lavish escape, or an exquisite venue for your special event,
+            our
+            hotel promises to exceed your every expectation.
+
+            Step into a world of elegance and refinement as you enter our meticulously designed guest rooms and suites.
+            Each space is a masterpiece of comfort and style, featuring contemporary décor, plush furnishings, and
+            state-of-the-art amenities. From spacious king-sized beds draped in sumptuous linens to expansive marble
+            bathrooms adorned with luxurious toiletries, every detail has been thoughtfully curated to ensure your
+            utmost
+            satisfaction.
+
+            Our accommodations cater to every preference, offering a range of options to suit solo travelers, couples,
+            families, and corporate guests alike. Whether you prefer a room with panoramic views of the city skyline, a
+            private terrace overlooking lush gardens, or a tranquil oasis nestled away from the hustle and bustle, we
+            have
+            the perfect sanctuary awaiting your arrival.
+          </p>
+          <img class="img-section" src="./assets/five-star.jpeg"/>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-about-us">
+      <mat-card-title class="title-about-us">Impeccable Service</mat-card-title>
+      <mat-card-content>
+        <div class="div-text">
+          <img class="img-section" style="margin-left: 0px !important; margin-right: 16px"
+               src="./assets/customers-love.jpeg">
+
+          <p>
+            At our 5-star hotel, hospitality is not just a duty; it's a passion. From the moment you step through our
+            doors, you'll be greeted by warm smiles and attentive service that anticipates your every need. Our
+            dedicated
+            staff is committed to providing personalized assistance and ensuring that your stay with us is nothing short
+            of extraordinary.
+
+            Whether you require assistance with arranging transportation, booking reservations at the finest restaurants
+            in town, or planning bespoke excursions to explore the local attractions, our concierge team is at your
+            disposal 24/7. Whatever your heart desires, we're here to make it happen with effortless grace and
+            unwavering
+            attention to detail.
+
+            Indulge your senses with an extraordinary culinary journey at our hotel's exquisite dining venues. From
+            gourmet restaurants showcasing the finest in local and international cuisine to chic lounges serving
+            handcrafted cocktails and delectable small bites, our culinary offerings are sure to tantalize your taste
+            buds
+            and leave you craving for more.
+
+            Savor the flavors of the world at our signature restaurant, where our award-winning chefs artfully blend
+            traditional recipes with innovative techniques to create unforgettable dining experiences. Whether you're in
+            the mood for fresh seafood, succulent steaks, or vibrant vegetarian dishes, our menus are crafted to please
+            even the most discerning palate.
+
+            For those seeking a more intimate setting, our private dining options provide the perfect ambiance for
+            special
+            celebrations, romantic dinners, and exclusive gatherings. Immerse yourself in luxury as you dine beneath the
+            stars on a secluded terrace or enjoy a bespoke menu tailored to your preferences in the comfort of your own
+            suite.
+          </p>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-about-us">
+      <mat-card-title class="title-about-us">Relaxation and Wellness</mat-card-title>
+      <mat-card-content>
+        <div class="div-text">
+
+          <p>
+            Escape the stresses of everyday life and embark on a journey of rejuvenation and renewal at our hotel's
+            world-class spa and wellness facilities. Pamper yourself with a blissful massage, invigorating facial, or
+            indulgent body treatment, all performed by skilled therapists using the finest organic products and
+            techniques.
+
+            Unwind in style at our tranquil poolside oasis, where you can bask in the sun, take a refreshing dip in the
+            crystal-clear waters, or simply lounge in the shade with a refreshing cocktail in hand. For those looking to
+            maintain their fitness routine while traveling, our state-of-the-art gym is equipped with the latest cardio
+            and strength training equipment, as well as expert personal trainers to assist you in achieving your
+            wellness
+            goals.
+
+            Experience the best of [City Name] with our curated selection of bespoke experiences and activities designed
+            to showcase the rich culture, history, and natural beauty of the region. Embark on a guided tour of the
+            city's
+            iconic landmarks, explore hidden gems off the beaten path, or indulge in adrenaline-pumping adventures such
+            as
+            hot air ballooning, mountain hiking, or water sports.
+
+            For culture enthusiasts, our hotel serves as the perfect base for exploring nearby museums, galleries, and
+            theaters, where you can immerse yourself in the vibrant arts scene and discover the creative talents of
+            local
+            artisans. From exclusive wine tastings and culinary workshops to private yacht charters and helicopter
+            tours,
+            the possibilities for unforgettable experiences are endless.
+          </p>
+
+          <img class="img-section"  src="./assets/spa.jpeg">
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-about-us">
+      <mat-card-title class="title-about-us">Events and Celebrations:</mat-card-title>
+      <mat-card-content>
+        <div class="div-text">
+          <img class="img-section" style="margin-left: 0px !important; margin-right: 16px" src="./assets/ballroom.jpeg">
+
+          <p>
+            Elevate your special occasions to new heights with our unparalleled event planning services and stunning
+            venues that set the stage for unforgettable moments. Whether you're hosting an intimate gathering, a grand
+            gala, or a corporate conference, our experienced event coordinators will work tirelessly to bring your vision
+            to life and ensure that every detail is executed flawlessly.
+
+            Choose from an array of elegant ballrooms, sophisticated boardrooms, and picturesque outdoor spaces, each
+            offering a unique ambiance and breathtaking views that provide the perfect backdrop for your event. From
+            custom-designed menus and exquisite floral arrangements to state-of-the-art audiovisual equipment and
+            professional event staffing, we have everything you need to create an unforgettable experience for you and
+            your guests.
+
+            At our 5-star hotel, every moment is an opportunity to create cherished memories that will last a lifetime.
+            Whether
+            you're seeking a romantic escape, a family vacation, a corporate retreat, or a destination wedding, we invite
+            you to
+            discover the unparalleled luxury and impeccable hospitality that await you at our esteemed establishment.
+
+            Indulge your senses, pamper your soul, and immerse yourself in the unparalleled beauty of our surroundings as
+            you
+            embark on a journey of relaxation, adventure, and discovery. From the moment you arrive until the moment you
+            depart,
+            we promise to exceed your every expectation and provide you with an experience that is nothing short of
+            extraordinary.
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <app-list-rooms [isAdmin]="false"></app-list-rooms>
+  </div>
+
+</mat-drawer-container>
+

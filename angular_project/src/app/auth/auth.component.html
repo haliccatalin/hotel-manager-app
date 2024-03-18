@@ -1,0 +1,72 @@
+<div [ngSwitch]="viewType" class="auth-div div-background">
+  <mat-card class="card-container" *ngSwitchCase="'login'">
+    <mat-card-content>
+      <div style="display: flex">
+        <img class="img-logo" [src]="appConfig.getAppLogo()"/>
+      </div>
+
+      <div class="input-container">
+        <mat-form-field class="input-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="test@test.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage(email)}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="input-container">
+        <mat-form-field class="input-field">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [formControl]="password" required>
+          <mat-error *ngIf="password.invalid">{{getErrorMessage(password)}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="div-buttons-container">
+        <button mat-raised-button color="primary" class="btn-save" (click)="onLogIn()">Log In</button>
+        <button mat-raised-button color="primary" class="btn-save" (click)="onSwitchViewType('register')">Create an
+          account?
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card-container" *ngSwitchCase="'register'">
+    <mat-card-content>
+      <div style="display: flex">
+        <img class="img-logo" [src]="appConfig.getAppLogo()"/>
+      </div>
+      <div class="input-container">
+        <mat-form-field class="input-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="user@domain.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage(email)}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field class="input-field">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Test.test" [formControl]="userName" required>
+          <mat-error *ngIf="userName.invalid">{{getErrorMessage(userName)}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field class="input-field">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [formControl]="password" required>
+          <mat-error *ngIf="password.invalid">{{getErrorMessage(password)}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field class="input-field">
+          <mat-label>Retype Password</mat-label>
+          <input matInput type="password" [formControl]="retypePassword" required>
+          <mat-error *ngIf="retypePassword.invalid">{{getErrorMessage(retypePassword)}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="div-buttons-container">
+        <button mat-raised-button color="primary" class="btn-save" (click)="onRegister()">Register</button>
+        <button mat-raised-button color="primary" class="btn-save" (click)="onSwitchViewType('login')">Back to Log In
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
